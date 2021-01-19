@@ -27,6 +27,11 @@ inquirer
       name: "usage",
     },
     {
+        type: "input",
+        message: "Enter technologies used",
+        name: "tech",
+      },
+    {
       type: "input",
       message: "Enter licenses used for the project",
       name: "license",
