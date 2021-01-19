@@ -1,63 +1,63 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const utils = require("utils");
-// const generateMarkdown = require("./utils/generateMarkdowns");
+const util = require("util");
 
-// TODO: Include packages needed for this application
- inquirer.prompt([
-    /* Pass your questions in here */
-    {
-      type: "input",
-      message: "Enter your project title",
-      name: "title",
-    },
-    {
-      type: "input",
-      message: "Enter a short project description",
-      name: "description",
-    },
-    {
-      type: "input",
-      message: "Enter the installation process",
-      name: "installation",
-    },
-    {
-      type: "input",
-      message: "Enter the usage of the project",
-      name: "usage",
-    },
-    {
-      type: "input",
-      message: "Enter technologies used",
-      name: "tech",
-    },
-    {
-      type: "input",
-      message: "Enter licenses used for the project",
-      name: "license",
-    },
-    {
-      type: "input",
-      message: "Enter contributing information",
-      name: "contributor",
-    },
-    {
-      type: "input",
-      message: "Enter any tests you are running for this project",
-      name: "test",
-    },
-    {
-      type: "input",
-      message: "Enter GitHub username",
-      name: "github",
-    },
-    {
-      type: "input",
-      message: "Enter email address",
-      name: "email",
-    },
-  ]);
+inquirer.prompt([
+  /* Pass your questions in here */
+  {
+    type: "input",
+    message: "Enter your project title",
+    name: "title",
+  },
+  {
+    type: "input",
+    message: "Enter a short project description",
+    name: "description",
+  },
+  {
+    type: "input",
+    message: "Enter the installation process",
+    name: "installation",
+  },
+  {
+    type: "input",
+    message: "Enter the usage of the project",
+    name: "usage",
+  },
+  {
+    type: "input",
+    message: "Enter technologies used",
+    name: "tech",
+  },
+  {
+    type: "checkbox",
+    message: "Enter the license used for this project",
+    name: "license",
+    choices: ["Apache", "Boost", "BSD", "Eclipse", "GNU", "MIT"],
+  },
+  {
+    type: "input",
+    message: "Enter contributing information",
+    name: "contributor",
+  },
+  {
+    type: "input",
+    message: "Enter any tests you are running for this project",
+    name: "test",
+  },
+  {
+    type: "input",
+    message: "Enter GitHub username",
+    name: "github",
+  },
+  {
+    type: "input",
+    message: "Enter email address",
+    name: "email",
+  },
+]);
 
+function generateMarkdown(response) {
   if (response.license == "Apache") {
     response.license =
       "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
@@ -67,7 +67,7 @@ const fs = require("fs");
   } else if (response.license == "BSD") {
     response.license =
       "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
-  } else if (response.license == "Eclipse Public License 1.0") {
+  } else if (response.license == "Eclipse") {
     response.license =
       "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
   } else if (response.license == "GNU") {
@@ -126,31 +126,15 @@ const fs = require("fs");
     
       ##Questions
 
-      If you have any questions about the repo, please feel free to reach me at ${response.email}.
-    `;
+      If you have any questions about the repo, please feel free to reach me via email: ${response.email} or connect with me via GitHub: ${response.username}.
+    `
+    .then(function (response) {
+      const markdown = generateMarkdown(response);
+      return writeFile("./util/generateMarkdown.md", markdown);
+    })
+    .catch((error) => {
+      error
+        ? console.error(error)
+        : console.log("Your ReadMe is generating!!!");
+    });
 }
-
-//         fs.writeFile('index.html', data, function(error){
-//       //True             //False (else)
-//       error ? console.error(error) : console.log('success')
-// })
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeToFile(`./${fileName.toLowerCase().split(' ').join('')}.md)`)
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-//   .then((data) => {
-//     // Use user feedback for... whatever!!
-//   })
-//   .catch((error) => {
-//     error
-//       ? console.error(error)
-//       : console.log("Your ReadMe has been generated!");
-//   });
