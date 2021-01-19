@@ -1,64 +1,86 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = require("utils");
-const generateMarkdown = require("./utils/generateMarkdowns");
-const { restoreDefaultPrompts } = require("inquirer");
-// TODO: Include packages needed for this application
-inquirer.prompt([
-  /* Pass your questions in here */
-  {
-    type: "input",
-    message: "Enter project title",
-    name: "title",
-  },
-  {
-    type: "input",
-    message: "Enter project description",
-    name: "description",
-  },
-  {
-    type: "input",
-    message: "Enter your installation process",
-    name: "installation",
-  },
-  {
-    type: "input",
-    message: "Enter the usage of the project",
-    name: "usage",
-  },
-  {
-    type: "input",
-    message: "Enter technologies used",
-    name: "tech",
-  },
-  {
-    type: "input",
-    message: "Enter licenses used for the project",
-    name: "license",
-  },
-  {
-    type: "input",
-    message: "Enter contributing information",
-    name: "contributor",
-  },
-  {
-    type: "input",
-    message: "Enter any tests you are running for this project",
-    name: "test",
-  },
-  {
-    type: "input",
-    message: "Enter GitHub username",
-    name: "github",
-  },
-  {
-    type: "input",
-    message: "Enter email address",
-    name: "email",
-  },
-]);
+// const utils = require("utils");
+// const generateMarkdown = require("./utils/generateMarkdowns");
 
-return `# ${response.title}
+// TODO: Include packages needed for this application
+ inquirer.prompt([
+    /* Pass your questions in here */
+    {
+      type: "input",
+      message: "Enter your project title",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "Enter a short project description",
+      name: "description",
+    },
+    {
+      type: "input",
+      message: "Enter the installation process",
+      name: "installation",
+    },
+    {
+      type: "input",
+      message: "Enter the usage of the project",
+      name: "usage",
+    },
+    {
+      type: "input",
+      message: "Enter technologies used",
+      name: "tech",
+    },
+    {
+      type: "input",
+      message: "Enter licenses used for the project",
+      name: "license",
+    },
+    {
+      type: "input",
+      message: "Enter contributing information",
+      name: "contributor",
+    },
+    {
+      type: "input",
+      message: "Enter any tests you are running for this project",
+      name: "test",
+    },
+    {
+      type: "input",
+      message: "Enter GitHub username",
+      name: "github",
+    },
+    {
+      type: "input",
+      message: "Enter email address",
+      name: "email",
+    },
+  ]);
+
+  if (response.license == "Apache") {
+    response.license =
+      "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  } else if (response.license == "Boost") {
+    response.license =
+      "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+  } else if (response.license == "BSD") {
+    response.license =
+      "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+  } else if (response.license == "Eclipse Public License 1.0") {
+    response.license =
+      "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
+  } else if (response.license == "GNU") {
+    response.license =
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (response.license == "MIT") {
+    response.license =
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  } else {
+    response.license = "None";
+  }
+
+  return `# ${response.title}
       
       ##Description:
 
@@ -74,33 +96,40 @@ return `# ${response.title}
       * [Test](#test)
       * [Questions](#questions)
       
-      ##Installation:
+      ##Installation
 
+      The following dependencies are necessary for this project to run,
       ${response.installation}
     
-      ##Usage:
+      ##Usage
 
       ${response.usage}
     
-      ##Technologies: 
+      ##Technologies 
 
-        This project was created with:
-        ${response.technologies} 
+      This project was created with:
+      ${response.technologies} 
 
-      ##License:
+      ##License
 
       This project is licensed under:
       ${response.license}
     
-      ##Contributors:
+      ##Contributors
+
       ${response.contributor}
 
+      ##Test
+
+      The following is needed to run the test:
+      ${response.test}
     
-      ##Test:
-    
-      ##Questions:
-        If you have any questions about the repo, please feel free to reach me at ${response.email}.
+      ##Questions
+
+      If you have any questions about the repo, please feel free to reach me at ${response.email}.
     `;
+}
+
 //         fs.writeFile('index.html', data, function(error){
 //       //True             //False (else)
 //       error ? console.error(error) : console.log('success')
