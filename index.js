@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const utils = require("utils");
+const generateMarkdown = require("./utils/generateMarkdowns");
+// TODO: Include packages needed for this application
 inquirer
   .prompt([
     /* Pass your questions in here */
@@ -49,17 +52,6 @@ inquirer
       name: "email",
     },
   ])
-  .then((response) => {
-    // Use user feedback for... whatever!!
-  })
-  .catch((error) => {
-    error
-      ? console.error(error)
-      : console.log("Your ReadMe has been generated!");
-  });
-
-// TODO: Include packages needed for this application
-
 // TODO: Create an array of questions for user input
 const questions = [];
 
@@ -71,3 +63,14 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+  .then((data) => {
+    // Use user feedback for... whatever!!
+  })
+  .catch((error) => {
+    error
+      ? console.error(error)
+      : console.log("Your ReadMe has been generated!");
+  });
+
+
