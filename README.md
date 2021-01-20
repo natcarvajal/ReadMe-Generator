@@ -1,17 +1,17 @@
 # ReadMe-Generator
 
-## Purpose: ##
+## Purpose:
 
 This weeks homework required me to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
 
-## User Story: ##
+## User Story:
 
 AS A developer<br>
 I WANT a README generator<br>
 SO THAT I can quickly create a professional README for a new project<br>
 
 
-## Acceptance Criteria: ##
+## Acceptance Criteria:
 
 GIVEN a command-line application that accepts user input
 * WHEN I am prompted for information about my application repository 
@@ -29,12 +29,16 @@ GIVEN a command-line application that accepts user input
 * WHEN I click on the links in the Table of Contents
 * THEN I am taken to the corresponding section of the README
 
+## Screenshot:
+  ![readme-generator-code-snippet](images/readme-generator-ss.png)
+
+
 ## Demo:
 * [Demo-Link](https://drive.google.com/file/d/1CcGVI1RfYEdZX5Uvjff6USBNRMkClecs/view)
   
- ## Languages Used: ##
+ ## Languages Used:
   
       Javascript, Node.js 
  
- ## Links: ##
+ ## Links:
 * [Github Repo](https://github.com/natcarvajal/ReadMe-Generator)
