@@ -101,7 +101,6 @@ function generateMarkdown(response) {
 ## Description:
 
 ${response.description}
-https://github.com/${response.github}/${response.title}
 
 # Table of Contents
 * [Installation](#installation)

@@ -1,11 +1,11 @@
-# n
+# ReadMe Generator
 
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
 
-a
-https://github.com//n
+The purpose of the project is to create README files using a set template
+https://github.com/natcarvajal/ReadMe Generator
 
 # Table of Contents
 * [Installation](#installation)
@@ -19,32 +19,31 @@ https://github.com//n
 ## Installation
 
 The following dependencies are necessary for this project to run,<br>
-t
+npm i install
 
 ## Usage
 
-a
+to create uniform readme files for future projects
 
 ## Technologies 
 
 This project was created with:<br>
-l 
+node.js 
 
 ## License
 
 This project is licensed under:<br>
-Apache
+MIT
 
 ## Contributors
 
-a
+none
 
 ## Test
 
 The following is needed to run the test:<br>
-t
+node run test
 
 ## Questions
 
-If you have any questions about the repo, please feel free to reach me via email: t or connect with me via GitHub: .
-![headshot-pic-of-me](./images/circle-headshot.png)
+If you have any questions about the repo, please feel free to reach me via email: nataliacarvajal1996@gmail.com or connect with me via GitHub: natcarvajal.
