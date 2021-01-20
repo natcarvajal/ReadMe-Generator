@@ -1,11 +1,11 @@
-# README Generator
+# n
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description:
 
-this project allows the user to make a readme file with answering a few simple questions
-https://github.com/undefined/README Generator
+a
+https://github.com//n
 
 # Table of Contents
 * [Installation](#installation)
@@ -18,32 +18,33 @@ https://github.com/undefined/README Generator
 
 ## Installation
 
-The following dependencies are necessary for this project to run,
-npm i install
+The following dependencies are necessary for this project to run,<br>
+t
 
 ## Usage
 
-to generate a readme file so  all my projects follow a unifrom layout
+a
 
 ## Technologies 
 
-This project was created with:
-node.js 
+This project was created with:<br>
+l 
 
 ## License
 
-This project is licensed under:
-MIT
+This project is licensed under:<br>
+Apache
 
 ## Contributors
 
-none
+a
 
 ## Test
 
-The following is needed to run the test:
-none
+The following is needed to run the test:<br>
+t
 
 ## Questions
 
-If you have any questions about the repo, please feel free to reach me via email: nataliacarvajal1996@gmail.com or connect with me via GitHub: natcarvajal.
+If you have any questions about the repo, please feel free to reach me via email: t or connect with me via GitHub: .
+![headshot-pic-of-me](./images/circle-headshot.png)
