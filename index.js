@@ -101,7 +101,7 @@ function generateMarkdown(response) {
 ## Description:
 
 ${response.description}
-https://github.com/${response.username}/${response.title}
+https://github.com/${response.github}/${response.title}
 
 # Table of Contents
 * [Installation](#installation)
@@ -114,7 +114,7 @@ https://github.com/${response.username}/${response.title}
 
 ## Installation
 
-The following dependencies are necessary for this project to run,
+The following dependencies are necessary for this project to run,<br>
 ${response.installation}
 
 ## Usage
@@ -123,12 +123,12 @@ ${response.usage}
 
 ## Technologies 
 
-This project was created with:
+This project was created with:<br>
 ${response.tech} 
 
 ## License
 
-This project is licensed under:
+This project is licensed under:<br>
 ${response.license}
 
 ## Contributors
@@ -137,7 +137,7 @@ ${response.contributor}
 
 ## Test
 
-The following is needed to run the test:
+The following is needed to run the test:<br>
 ${response.test}
 
 ## Questions

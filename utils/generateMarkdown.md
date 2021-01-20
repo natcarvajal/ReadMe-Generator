@@ -1,11 +1,11 @@
-# Justin
+# README Generator
 
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
 
-Rice
-https://github.com/undefined/Justin
+this project allows the user to make a readme file with answering a few simple questions
+https://github.com/undefined/README Generator
 
 # Table of Contents
 * [Installation](#installation)
@@ -19,31 +19,31 @@ https://github.com/undefined/Justin
 ## Installation
 
 The following dependencies are necessary for this project to run,
-npm
+npm i install
 
 ## Usage
 
-npm
+to generate a readme file so  all my projects follow a unifrom layout
 
 ## Technologies 
 
 This project was created with:
-npm 
+node.js 
 
 ## License
 
 This project is licensed under:
-Apache
+MIT
 
 ## Contributors
 
-npm
+none
 
 ## Test
 
 The following is needed to run the test:
-npm
+none
 
 ## Questions
 
-If you have any questions about the repo, please feel free to reach me via email: npm or connect with me via GitHub: npm.
+If you have any questions about the repo, please feel free to reach me via email: nataliacarvajal1996@gmail.com or connect with me via GitHub: natcarvajal.
